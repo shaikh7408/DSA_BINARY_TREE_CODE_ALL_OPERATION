@@ -68,13 +68,12 @@ class Binary_Tree:
                 current_node=current_node.left
     def Right_most_node(self,node:Node)->Node:
         current_node=node
-        while current_node.rightgg:
+        while current_node.right:
             current_node=current_node.right
         return current_node
     def deleting_node(self,value: int):
         deleting_element=self.find_node(value)
         parent_of_deleting_element=self.find_parent_node(value)
-        print(parent_of_deleting_element)
         if deleting_element.left and deleting_element.right:
             rightmost=self.Right_most_node(deleting_element.left)
             parents_of_righmost_node=self.find_parent_node(rightmost.value)
